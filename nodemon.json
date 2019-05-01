@@ -9,8 +9,7 @@
     "node_modules"
   ],
   "watch": [
-    "./src",
-    ".env"
+    "./src"
   ],
   "ext": "ts,js,json,yaml,yml"
 }
