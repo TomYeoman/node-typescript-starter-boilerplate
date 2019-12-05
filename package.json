@@ -8,8 +8,8 @@
     "debug": "nodemon src/index.ts",
     "convert": "ts-jest config:migrate ./jest.config.js",
     "// ------ TESTING ----- //": "",
-    "test": "jest ./src --watch",
-    "coverage": "jest --collectCoverageFrom=src/**.js --coverage",
+    "test": "jest --watch",
+    "coverage": "jest --collectCoverageFrom=src/**/*.ts --coverage",
     "// ------ BUILDING ----- //": "",
     "build": "tsc",
     "build:watch": "tsc -w",
@@ -44,3 +44,4 @@
     "prettier": "^1.16.4"
   }
 }
+
