@@ -6,14 +6,15 @@ Basic node boiler plate loaded with all the goodies you need to get up and runni
 
 ## Features
 
- - Eslint to lint ( Includes prettier integration to auto-format code ) - https://eslint.org/blog/2019/01/future-typescript-eslint
  - `test` script with full Jest + TS support
  - `debug` script to use during development which provides auto restarting on changes ( using nodemon + ts-node )
  - `build` script to convert our typescript code to plain JavaScript for usage in a production environment
 
+Also provided is a `lint` script - which will run eslint and verify your code. 
+
 ## Suggested VS code configuration
 
-To make the most of the eslint setup mentioned above I suggest you open up your `settings.json` file and add the following code - it will allow vs code to auto-fix any problems + format on save
+To make the most of eslint, I suggest you open up your `settings.json` file and add the following code - it will allow vs code to auto-fix any problems + format on save
 
 ```
  /**
