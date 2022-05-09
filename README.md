@@ -1,47 +1,26 @@
-basic node boiler plate loaded with all the goodies you need to get up and running quickly!
+# node-typescript-starter-boilerplate - Now updated for 2022!
 
-# node-typescript-starter-boilerplate
-
-Basic node boiler plate loaded with all the goodies you need to get up and running quickly!
+A minimal node typescript boiler plate, loaded with everthing you need to quickly setup a productive typescript environment quickly.
 
 ## Features
 
- - `test` script with full Jest + TS support
- - `debug` script to use during development which provides auto restarting on changes ( using nodemon + ts-node )
- - `build` script to convert our typescript code to plain JavaScript for usage in a production environment
+- Simple express server, with a single route to get started.
+- Testing supported via Jest, with coverage reports.
+- Ability to debug during development, either via the CLI with auto-restart on file change via nodemon (`npm run debug`), or via the editor (Press F5 whilst in `index.ts`).
+- Linting (with prettier support), run automatically on save (see `.vscode/settings.json`), and on commit via husky (see `npm run lint`)
 
-Also provided is a `lint` script - which will run eslint and verify your code. 
+* Changelog (09/05/2022) *
 
-## Suggested VS code configuration
+- Use latest jest testing + config format.
+- Use latest (and simplified) linting config with prettier support, with ability to lint on save without additional work, and also on commit.
+- Add environment variable support, with validation (service will exit if not present) support.
+- Added basic express example route, with a single route and validation middleware.
 
-To make the most of eslint, I suggest you open up your `settings.json` file and add the following code - it will allow vs code to auto-fix any problems + format on save
 
-```
- /**
-    ----- Linting configurations
-  */
-  // Prevent editor formatting on save for certain file types
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false,
-  },
-  "[typescript]": {
-    "editor.formatOnSave": false,
-  },
-  // Configure eslint to report + fix errors for correct file types
-  "editor.formatOnPaste": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    }
-  ],
-```
+Helpful resources on latest round of changes:
+- https://dev.to/viniciuskneves/prettier-eslint-and-typescript-491j
+- https://blog.appsignal.com/2022/01/19/how-to-set-up-a-nodejs-project-with-typescript.html
+- https://blog.logrocket.com/testing-typescript-apps-using-jest/
 
-Please feel free to open an issue with suggestions / an MR to contribute :).
+
+**Please feel free to open an issue with suggestions / an MR to contribute :).**
