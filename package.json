@@ -19,7 +19,8 @@
     "lint:list": "eslint .",
     "lint": "eslint . --fix",
     "// ------ PRODUCTION ----- //": "",
-    "start:prod": "nodemon src/index.ts"
+    "start:prod": "nodemon src/index.ts",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +32,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.18.1",
     "helmet": "^5.0.2",
+    "husky": "^8.0.1",
     "ts-jest": "^ 28.0.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
@@ -45,7 +47,11 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "28.1.0",
+    "lint-staged": "^12.4.1",
     "nodemon": "^2.0.16",
     "prettier": "^2.6.2"
+  },
+  "lint-staged": {
+    "*.{ts,js}": "eslint --fix"
   }
 }

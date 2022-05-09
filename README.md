@@ -14,7 +14,7 @@ A minimal node typescript boiler plate, loaded with everthing you need to quickl
 - Use latest jest testing + config format.
 - Use latest (and simplified) linting config with prettier support, with ability to lint on save without additional work, and also on commit.
 - Add environment variable support, with validation (service will exit if not present) support.
-- Added basic express example route, with a single route and validation middleware.
+- Added basic express example route, with a single route, and validation middleware.
 
 
 Helpful resources on latest round of changes:
