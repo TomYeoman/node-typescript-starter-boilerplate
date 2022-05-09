@@ -1,8 +1,8 @@
-# node-typescript-starter-boilerplate - Now updated for 2022!
+# node-typescript-starter-boilerplate - updated for 2022!
 
-A minimal node typescript boiler plate, loaded with everything you expect from a productive modern typescript environment.
+A minimal node typescript boiler plate, loaded with everything you expect from a productive modern typescript environment. 
 
-## Features
+# Features
 
 - Simple express server, with a single route to get started.
 - Testing supported via Jest, with coverage reports.
@@ -14,17 +14,18 @@ A minimal node typescript boiler plate, loaded with everything you expect from a
 - First thing you need to do when cloning is `npm run prepare` once, in order to setup husky (staged files will then be auto linted on commit after this).
 
 You can then start developing
-- Use `npm run debug` to watch files, Once you are happy use `npm run build` to transpile the TS to JS
+- Use `npm run debug` to watch files and automatically reload server during development. Once you are happy use `npm run build` to transpile the TS to JS, and `yarn start` to run it.
 
+--- 
 
-* Changelog (09/05/2022) *
+## Changelog (09/05/2022)
 
 - Use latest jest testing + config format.
 - Use latest (and simplified) linting config with prettier support, with ability to lint on save without additional work, and also on commit.
 - Add environment variable support, with validation (service will exit if not present) support.
 - Added basic express example route, with a single route, and validation middleware.
 
-* Helpful resources on latest round of changes *
+*Helpful resources on latest round of changes*
 - https://dev.to/viniciuskneves/prettier-eslint-and-typescript-491j
 - https://blog.appsignal.com/2022/01/19/how-to-set-up-a-nodejs-project-with-typescript.html
 - https://blog.logrocket.com/testing-typescript-apps-using-jest/
