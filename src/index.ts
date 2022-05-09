@@ -1,5 +1,5 @@
 // Express
-import express from "express";
+import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 
@@ -22,6 +22,11 @@ app.use(express.json()); // Parse JSON body
 // Routes
 app.use("/api/user/", userRouter);
 app.use(errorHandler);
+
+// Fallback if no route matches
+app.use((req: Request, res: Response) => {
+  res.status(404).send("Sorry can't find that!");
+});
 
 // Server Activation
 app.listen(PORT, () => {

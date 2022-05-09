@@ -8,6 +8,7 @@
   },
   "scripts": {
     "// ------ DEVELOPMENT ----- //": "",
+    "prepare": "husky install",
     "debug": "nodemon src/index.ts",
     "// ------ TESTING ----- //": "",
     "test": "jest --watch",
@@ -19,8 +20,7 @@
     "lint:list": "eslint .",
     "lint": "eslint . --fix",
     "// ------ PRODUCTION ----- //": "",
-    "start:prod": "nodemon src/index.ts",
-    "prepare": "husky install"
+    "start": "node src/dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +28,7 @@
   "dependencies": {
     "@types/jest": "^27.5",
     "@types/node": "^17.0.31",
+    "@types/supertest": "^2.0.12",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.18.1",
@@ -49,7 +50,8 @@
     "jest": "28.1.0",
     "lint-staged": "^12.4.1",
     "nodemon": "^2.0.16",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "supertest": "^6.2.3"
   },
   "lint-staged": {
     "*.{ts,js}": "eslint --fix"

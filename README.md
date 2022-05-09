@@ -1,6 +1,6 @@
 # node-typescript-starter-boilerplate - Now updated for 2022!
 
-A minimal node typescript boiler plate, loaded with everthing you need to quickly setup a productive typescript environment quickly.
+A minimal node typescript boiler plate, loaded with everything you expect from a productive modern typescript environment.
 
 ## Features
 
@@ -9,6 +9,14 @@ A minimal node typescript boiler plate, loaded with everthing you need to quickl
 - Ability to debug during development, either via the CLI with auto-restart on file change via nodemon (`npm run debug`), or via the editor (Press F5 whilst in `index.ts`).
 - Linting (with prettier support), run automatically on save (see `.vscode/settings.json`), and on commit via husky (see `npm run lint`)
 
+# How to use
+
+- First thing you need to do when cloning is `npm run prepare` once, in order to setup husky (staged files will then be auto linted on commit after this).
+
+You can then start developing
+- Use `npm run debug` to watch files, Once you are happy use `npm run build` to transpile the TS to JS
+
+
 * Changelog (09/05/2022) *
 
 - Use latest jest testing + config format.
@@ -16,11 +24,11 @@ A minimal node typescript boiler plate, loaded with everthing you need to quickl
 - Add environment variable support, with validation (service will exit if not present) support.
 - Added basic express example route, with a single route, and validation middleware.
 
-
-Helpful resources on latest round of changes:
+* Helpful resources on latest round of changes *
 - https://dev.to/viniciuskneves/prettier-eslint-and-typescript-491j
 - https://blog.appsignal.com/2022/01/19/how-to-set-up-a-nodejs-project-with-typescript.html
 - https://blog.logrocket.com/testing-typescript-apps-using-jest/
+- https://dev.to/truemark/run-eslint-on-git-commit-with-husky-and-lint-staged-in-reactjs-4oeb
 
 
 **Please feel free to open an issue with suggestions / an MR to contribute :).**
