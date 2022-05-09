@@ -5,12 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Typescript",
+      "name": "Debug src/server.js",
       "type": "node",
       "request": "launch",
       "runtimeArgs": [
         "-r",
-        "ts-node/register",
+        "ts-node/register"
       ],
       "env": {
         "NODE_ENV": "development"
@@ -18,7 +18,6 @@
       "args": [
         "${workspaceFolder}/src/index.ts"
       ],
-      "protocol": "inspector",
       "outputCapture": "std",
     }
   ]

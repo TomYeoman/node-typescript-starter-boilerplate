@@ -1,6 +1,7 @@
-  {
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#000",
-      "titleBar.inactiveBackground": "#000"
-    }
-  }
+{
+  "editor.formatOnSave": true,
+  // tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+}
