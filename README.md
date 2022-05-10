@@ -16,6 +16,12 @@ A minimal node typescript boiler plate, loaded with everything you expect from a
 You can then start developing
 - Use `npm run debug` to watch files, Once you are happy use `npm run build` to transpile the TS to JS
 
+# Architecture
+
+The architecture implements MVC as follows:
+- View - Currently not added, but feel free to modify `./src/index.ts` to serve your HTML.
+- Each route will call a controller, which acts as the "manager" to coordinate whatever is required to fulfil that request (fetching data via the data access layer, and transforming it to present to the client).
+- Each controller will call out to a Model (AKA repository, or data access layer). The data access layers API should be data access technology agnostic (I.E it doesn't change no matter which DB you implement to action the requests).
 
 * Changelog (09/05/2022) *
 

@@ -1,15 +1,7 @@
 {
-  "execMap": {
-    "ts": "ts-node"
-  },
-  "ignore": [
-    "test/**/*.ts",
-    "test/**/*.spec.ts",
-    ".git",
-    "node_modules"
-  ],
   "watch": [
-    "./src"
+    "src"
   ],
-  "ext": "ts,js,json,yaml,yml"
+  "ext": "ts,js,json",
+  "exec": "ts-node --files -r tsconfig-paths/register -r dotenv/config src/index.ts | pino-pretty"
 }

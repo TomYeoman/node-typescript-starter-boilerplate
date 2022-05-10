@@ -3,6 +3,24 @@
   "compilerOptions": {
     "outDir": "src/dist", // where to put the compiled JS files,
     "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@logger/*": [
+        "src/logger/*"
+      ],
+      "@model": [
+        "src/api/model/index"
+      ],
+      "@model/*": [
+        "src/api/model/*"
+      ],
+      "@test/*": [
+        "__tests__/*"
+      ],
+    }
   },
   "include": [
     "src"
