@@ -1,9 +1,30 @@
+import assert from "assert";
 import dotenv from "dotenv";
 
 dotenv.config();
 
 export const APP_SECRET = process.env.APP_SECRET;
 export const PORT = process.env.PORT;
+
+export enum NodeEnv {
+  Test,
+  Development,
+  Production,
+}
+
+export const NODE_ENV = (): NodeEnv => {
+  assert(process.env.NODE_ENV, "NODE_ENV is not set");
+  switch (process.env.NODE_ENV) {
+    case "test":
+      return NodeEnv.Test;
+    case "development":
+      return NodeEnv.Development;
+    case "production":
+      return NodeEnv.Production;
+  }
+
+  return NodeEnv.Test;
+};
 
 export const validateEnv = (): void => {
   if (!APP_SECRET) {
