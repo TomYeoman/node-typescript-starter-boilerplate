@@ -38,4 +38,4 @@ The architecture implements MVC as follows:
 - https://dev.to/truemark/run-eslint-on-git-commit-with-husky-and-lint-staged-in-reactjs-4oeb
 
 
-**Please feel free to open an issue with suggestions / an MR to contribute :).**
+**Please feel free to open an issue with suggestions / a PR to contribute to this project :).**
