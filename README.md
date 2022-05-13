@@ -15,7 +15,7 @@ A minimal node typescript boiler plate, loaded with everything you expect from a
 - First thing you need to do when cloning is `npm run prepare` once, in order to setup husky (staged files will then be auto linted on commit after this).
 
 You can then start developing
-- Use `npm run debug` to watch files and automatically reload server during development. Once you are happy use `npm run build` to transpile the TS to JS, and `yarn start` to run it.
+- Use `npm run debug` to watch files and automatically reload server during development. Once you are happy use `npm run build` to transpile the TS to JS, and `npm run start` to run it.
 
 # Architecture
 
