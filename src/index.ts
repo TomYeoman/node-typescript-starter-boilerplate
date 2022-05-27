@@ -11,7 +11,7 @@ import * as db from "@model/db";
 import { userRouter } from "./api/routes/users_route";
 
 // Check we've instantiated service with correct env vars
-import { validateEnv } from "./utils/config_validator";
+import { validateEnv } from "@env/env";
 import { errorHandler } from "./api/middleware/error_middleware";
 import requestLogger from "./api/middleware/log_requests";
 
@@ -47,10 +47,12 @@ process.on("unhandledRejection", (err) => {
   app.use(helmet()); // Security
   app.use(cors()); // Cross-Origin Resource Sharing
   app.use(express.json()); // Parse JSON body
-  app.use(requestLogger); // Log HTTP req/res
 
   // Routes
+  app.use(requestLogger); // Log HTTP req/res
   app.use("/api/user/", userRouter);
+
+  // Middleware
   app.use(errorHandler);
 
   // Fallback if no route matches

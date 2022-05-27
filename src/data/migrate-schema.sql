@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS users (
+  user_stub TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+

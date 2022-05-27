@@ -1,9 +1,11 @@
+import logger from "@logger/logger";
 /**
  * Required External Modules and Interfaces
  */
 import express, { NextFunction, Request, Response } from "express";
 import { checkJwt } from "../middleware/auth_middleware";
 import HttpException from "../middleware/http_exception";
+import { getUser } from "../model/users_model";
 
 /**
  * Router Definition
@@ -14,24 +16,24 @@ export const userRouter = express.Router();
  * Controller Definitions
  */
 userRouter.get(
-  "/route",
+  "/validate",
   checkJwt,
-  async (request: Request, response: Response, next: NextFunction) => {
-    console.log(
-      "Sending fake user, you should get the real user from the DB if we had confirmed the JWT was valid"
-    );
-    const userAuthenticated = true;
+  async (req: Request, res: Response, next: NextFunction) => {
+    const fakeToken = "FAKE_USER_ID";
 
-    if (userAuthenticated) {
-      return response.status(200).send({
-        message: "You are logged in",
-        user: {
-          name: "John Doe",
-          email: "..@gmail.com",
-        },
-      });
+    console.log(`Fetching user using a fake JWT validated token: ${fakeToken}`);
+
+    const user = await getUser("FAKE_USER_ID");
+
+    if (user.isErr()) {
+      logger.error(user.error);
     } else {
-      next(new HttpException(401, "You are not logged in"));
+      logger.info(user);
     }
+
+    // console.log(user);
+    return res.status(200).send({
+      user,
+    });
   }
 );

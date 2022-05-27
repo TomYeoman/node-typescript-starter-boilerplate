@@ -1,20 +1,21 @@
 # node-typescript-starter-boilerplate - updated for 2022!
 
-A minimal node typescript boiler plate, loaded with everything you expect from a productive modern typescript environment.
+A minimal node typescript boiler plate, loaded with everything you expect from a modern, productive typescript environment.
 
 # Features
 
-- Simple express server, with a single route (with middleware examples) to get started.
+- Simple express server, with a single route (with middleware examples) to get started, communicating with a SQLite DB.
 - Testing - supported via Jest (`npm run test`), with command also provided to produce coverage reports (`npm run coverage`).
 - Debugging experience - Can use `npm run debug` to run you code via nodemon, which will auto-restart on file changes. You can also run the code within the editor (therefore being able to add breakpoints) by pressing F5 whilst in `index.ts` (see `launch.json`).
 - Linting - Eslint with prettier support. Runs automatically on save (see `.vscode/settings.json`), and on commit via husky (see `npm run lint`)
-- Logging - via Pino, added as both an express middleware, as exposed as an import `@logging`
+- Logging - Supported via Pino. Requests are logged via the logging middleware, then also a logging instance is exposed as an import `@logging`
 
 # How to use
 
 - First thing you need to do when cloning is `npm run prepare` once, in order to setup husky (staged files will then be auto linted on commit after this).
 
 You can then start developing
+
 - Use `npm run debug` to watch files and automatically reload server during development. Once you are happy use `npm run build` to transpile the TS to JS, and `npm run start` to run it.
 
 # Architecture

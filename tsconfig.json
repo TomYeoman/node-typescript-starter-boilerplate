@@ -20,6 +20,18 @@
       "@test/*": [
         "__tests__/*"
       ],
+      "@env": [
+        "src/env/index"
+      ],
+      "@env/*": [
+        "src/env/*"
+      ],
+      "@utils": [
+        "src/utils/index"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ]
     }
   },
   "include": [

@@ -12,10 +12,7 @@ export function openDatabase(): void {
 }
 
 export async function prepareDatabase(): Promise<IDatabase> {
-  const migration = fs.readFileSync(
-    "./src/api/model/migrate-schema.sql",
-    "utf8"
-  );
+  const migration = fs.readFileSync("./src/data/migrate-schema.sql", "utf8");
   db.exec(migration);
 
   assert(db, "Database is not opened");
