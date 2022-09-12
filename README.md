@@ -5,8 +5,8 @@ A minimal node typescript boiler plate, loaded with everything you expect from a
 # Features
 
 - Simple express server, with a single route (with middleware examples) to get started, communicating with a SQLite DB.
-- Testing - supported via Jest (`npm run test`), with command also provided to produce coverage reports (`npm run coverage`).
-- Debugging experience - Can use `npm run debug` to run you code via nodemon, which will auto-restart on file changes. You can also run the code within the editor (therefore being able to add breakpoints) by pressing F5 whilst in `index.ts` (see `launch.json`).
+- Testing - supported via Jest (`npm run test`), with commands also provided to produce coverage reports (`npm run coverage`).
+- Debugging experience - Can use `npm run debug` to automatically reload your server on change. You can also debug the server within your editor (therefore being able to add breakpoints) by pressing F5 whilst in `index.ts` (see `launch.json`).
 - Linting - Eslint with prettier support. Runs automatically on save (see `.vscode/settings.json`), and on commit via husky (see `npm run lint`)
 - Logging - Supported via Pino. Requests are logged via the logging middleware, then also a logging instance is exposed as an import `@logging`
 
